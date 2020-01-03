@@ -1,7 +1,7 @@
 # Train your own custom face detector
 ___
 
-### Enviornment setup
+### Enviornment setup for training on GPU
 ```conda create -n tensorflow_p36 python=3.6 anaconda```
 ```conda install -c anaconda keras-gpu ```
 
