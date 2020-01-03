@@ -1,10 +1,7 @@
-# Face Recognition using Tensorflow [![Build Status][travis-image]][travis]
-
-
 # Train your own custom face detector
 ___
 
-### Eiornment setup
+### Enviornment setup
 ```conda create -n tensorflow_p36 python=3.6 anaconda```
 ```conda install -c anaconda keras-gpu ```
 
