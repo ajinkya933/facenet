@@ -1,5 +1,46 @@
 # Face Recognition using Tensorflow [![Build Status][travis-image]][travis]
 
+
+# Train your own custom face detector
+___
+
+### Eiornment setup
+```conda create -n tensorflow_p36 python=3.6 anaconda```
+```conda install -c anaconda keras-gpu ```
+
+go to cd ~/
+and make these directories
+~/logs/facenet/
+~/models/facenet/20180402-114759/
+~/datasets/lfw/lfw_mtcnnpy_160/
+
+```
+python src/train_softmax.py \
+--logs_base_dir ~/logs/facenet/ \
+--models_base_dir ~/models/facenet/20180402-114759/ \
+--data_dir ~/datasets/lfw/lfw_mtcnnpy_160/ \
+--image_size 160 \
+--model_def models.inception_resnet_v1 \
+--lfw_dir ~/datasets/lfw/lfw_mtcnnpy_160/ \
+--optimizer ADAM \
+--learning_rate -1 \
+--max_nrof_epochs 150 \
+--keep_probability 0.8 \
+--random_crop \
+--random_flip \
+--use_fixed_image_standardization \
+--learning_rate_schedule_file data/learning_rate_schedule_classifier_casia.txt \
+--weight_decay 5e-4 \
+--embedding_size 512 \
+--lfw_distance_metric 1 \
+--lfw_use_flipped_images \
+--lfw_subtract_mean \
+--validation_set_split_ratio 0.05 \
+--validate_every_n_epochs 5 \
+--prelogits_norm_loss_factor 5e-4
+```
+
+
 [travis-image]: http://travis-ci.org/davidsandberg/facenet.svg?branch=master
 [travis]: http://travis-ci.org/davidsandberg/facenet
 
