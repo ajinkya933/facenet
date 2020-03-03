@@ -1,5 +1,8 @@
 # Create tf1.7 and python3.5 env in docker
 ___
+Location of facenet
+https://drive.google.com/file/d/1oNHs2obtZxRs82AfNTw9gAMvi8-jRlBF/view?usp=sharing
+
 ```
 FROM sgoblin/python3.5:latest
 # docker pull sgoblin/python3.5
