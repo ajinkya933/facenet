@@ -14,8 +14,12 @@ pip install opencv-python-headless
 pip install -r requirnments.txt
 pip install tensorflow-serving-api
 ```
-
-
+in addition to this downgrade your numpy and scipy packages
+to
+```
+pip install numpy==1.14.3
+pip install scipy==1.1.0
+```
 
 # Train your own custom face detector
 ___
