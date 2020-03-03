@@ -1,3 +1,19 @@
+# Create tf1.7 and python3.5 env in docker
+___
+```
+FROM sgoblin/python3.5:latest
+# docker pull sgoblin/python3.5
+# docker run -i -t sgoblin/python3.5
+pip3 install --upgrade pip
+apt-get update
+apt-get install -y libsm6 libxext6 libxrender-dev
+pip install opencv-python-headless
+pip install -r requirnments.txt
+pip install tensorflow-serving-api
+```
+
+
+
 # Train your own custom face detector
 ___
 
